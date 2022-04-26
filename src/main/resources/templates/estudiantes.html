@@ -35,6 +35,8 @@
             <td th:text="${estudiante.nombre}">Nombre</td>
             <td th:text="${estudiante.apellido}">Apellido</td>
             <td th:text="${estudiante.email}">Email</td>
+            <td><a th:href="@{/estudiantes/editar/{id}(id=${estudiante.id})}" class="btn btn-info">Editar</a>
+                <a th:href="@{/estudiantes/{id}(id=${estudiante.id})}" class="btn btn-danger">Eliminar</a></td>
         </tr>
         </tbody>
     </table>

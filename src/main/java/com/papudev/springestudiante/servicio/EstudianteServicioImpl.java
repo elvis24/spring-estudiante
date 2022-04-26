@@ -22,4 +22,19 @@ public class EstudianteServicioImpl implements EstudianteServicio{
     public Estudiante guardarEstudiante(Estudiante estudiante) {
         return estudianteRepository.save(estudiante);
     }
+
+    @Override
+    public Estudiante estudiantebyId(Long id) {
+        return estudianteRepository.findById(id).get();
+    }
+
+    @Override
+    public Estudiante estudianteUpdate(Estudiante estudiante) {
+        return estudianteRepository.save(estudiante);
+    }
+
+    @Override
+    public void eliminarEstudiante(Long id) {
+        estudianteRepository.deleteById(id);
+    }
 }
